@@ -1,0 +1,16 @@
+# vscode 셋팅
+.vscode/
+
+# 빌드 디렉토리
+dist/
+
+# node_modules 디렉토리
+node_modules/
+
+# 환경 파일
+.env
+
+# 로그 파일
+*.log
+
+.DS_Store
