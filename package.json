@@ -1,10 +1,24 @@
 {
-  "name": "lambda-simple-server",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "lamfox",
+  "version": "0.1.1",
+  "type": "module",
+  "private": false,
   "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/mjs/index.js",
+  "types": "dist/index.d.ts",
+  "author": {
+    "name": "Jaehoon Shin",
+    "email": "tlswogns135@gmail.com"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "scripts": {
-    "build": "yarn tsc"
+    "build": "rm -fr dist/* && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json"
   },
   "dependencies": {
     "reflect-metadata": "^0.2.2"
@@ -14,5 +28,10 @@
     "@types/aws-lambda": "^8.10.146",
     "prettier": "^3.3.3",
     "typescript": "^5.7.2"
-  }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ]
 }
